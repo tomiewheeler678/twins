@@ -10,6 +10,12 @@
   </head>
 
   <body>
+
+    <div class="col-5 links">
+      <%= link_to 'Customers', new_customer_path %>>
+      <br />
+      <%= link_to 'Pets', new_pet_path %>>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,5 +1,17 @@
 <h1>New Pet</h1>
 
-<%= render 'form', pet: @pet %>
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :petName %>
+  <%= f.input :petSpecies %>
+  <%= f.input :petBreed %>
+  <%= f.input :weight %>
+  <%= f.input :age %>
+  <%= f.input :color %>
+  <%= f.input :medicalConditions %>
+  <%= f.input :prescriptions %>
+  <%= f.input :favoriteToy %>
+  <br />
+  <%= f.submit 'Create', class: 'btn btn-danger' %>
+<% end %>
 
 <%= link_to 'Back', pets_path %>
